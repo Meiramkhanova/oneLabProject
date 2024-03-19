@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Header />
-      <SignIn />
+      <h1 style={{ textAlign: "center" }}>Main Page</h1>
     </div>
   );
 }

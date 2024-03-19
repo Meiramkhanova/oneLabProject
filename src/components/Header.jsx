@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -53,26 +54,31 @@ export default function Header() {
             />
           </Paper>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Button
-              sx={{
-                backgroundColor: "#163A4E",
-                marginRight: "13px",
-                borderRadius: "5px",
-              }}
-              color="inherit"
-            >
-              Sign In
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "#D9D9D9",
-                color: "#6D6D6D",
-                borderRadius: "5px",
-              }}
-              color="inherit"
-            >
-              Sign Up
-            </Button>
+            <Link to="login">
+              <Button
+                sx={{
+                  backgroundColor: "#163A4E",
+                  marginRight: "13px",
+                  borderRadius: "5px",
+                  color: "white",
+                }}
+                color="inherit"
+              >
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button
+                sx={{
+                  backgroundColor: "#D9D9D9",
+                  color: "#6D6D6D",
+                  borderRadius: "5px",
+                }}
+                color="inherit"
+              >
+                Sign Up
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

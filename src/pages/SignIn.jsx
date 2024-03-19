@@ -2,8 +2,9 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignIn() {
   return (
     <div
       style={{
@@ -66,15 +67,17 @@ export default function SignUp() {
       </Button>
       <p style={{ fontWeight: "500", marginTop: "15px" }}>
         Don’t have an account?{" "}
-        <span
-          style={{
-            color: "#285975",
-            textDecoration: "underline",
-            cursor: "pointer",
-          }}
-        >
-          Sign Up Here
-        </span>
+        <Link to="/register">
+          <span
+            style={{
+              color: "#285975",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Sign Up Here
+          </span>
+        </Link>
       </p>
       <p style={{ color: "#8E8E93", marginTop: "9px" }}>OR</p>
       <Button
